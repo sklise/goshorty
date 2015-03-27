@@ -13,6 +13,8 @@ func main() {
 
 	bytes, _ := ioutil.ReadAll(os.Stdin)
 	pwd := string(bytes)
+	// Remove the newline that comes out of `pwd`
+	pwd = pwd[0:(len(pwd) - 1)]
 	pwdArr := strings.Split(pwd, "/")
 
 	comparisons := 0
